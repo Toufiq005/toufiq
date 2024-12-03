@@ -1,16 +1,11 @@
 
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import Image from "next/image";
 import me from "@/assets/toufiq-mowla.jpg";
-import { BorderBeam } from "@/components/ui/border-beam";
-import Particles from "@/components/ui/particles";
 import WordRotate from "@/components/ui/word-rotate";
-import SparklesText from "@/components/ui/sparkles-text";
 import ShineBorder from "@/components/ui/shine-border";
-
 import RetroGrid from "@/components/ui/retro-grid";
 import Meteors from "@/components/ui/meteors";
 import BoxReveal from "@/components/ui/box-reveal";

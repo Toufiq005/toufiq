@@ -11,7 +11,7 @@ import { Dock, DockIcon } from "@/components/ui/dock";
 import { FaWhatsapp, FaGithub } from "react-icons/fa";
 import { CiFacebook, CiMail } from "react-icons/ci";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
 import { Home, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -53,6 +53,10 @@ export default function DockBar() {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     setMouseX(e.pageX);
   };
+
+  useEffect(() => {
+    handleMouseMove;
+  }, []);
 
   return (
     <TooltipProvider>

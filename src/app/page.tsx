@@ -3,7 +3,6 @@ import Navbar from "./_components/Navbar";
 import Hero from "./_components/Hero";
 import Projects from "./_components/Projects";
 import About from "./_components/About";
-import Skills from "./_components/Skills";
 import Contact from "./_components/Contact";
 
 export default function Home() {

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import DockBar from "./_components/DockBar";
 import { cn } from "@/lib/utils";
 import { Poppins, Nunito } from "next/font/google";
 import { ThemeProvider } from "next-themes";

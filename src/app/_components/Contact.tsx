@@ -1,8 +1,6 @@
 import BoxReveal from "@/components/ui/box-reveal";
 import SparklesText from "@/components/ui/sparkles-text";
-import Globe from "@/components/ui/globe";
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
 import IconCloud from "@/components/ui/icon-cloud";
 import ContactForm from "./ContactForm";
 

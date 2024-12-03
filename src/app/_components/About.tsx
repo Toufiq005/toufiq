@@ -1,7 +1,6 @@
 "use client";
 
 import SparklesText from "@/components/ui/sparkles-text";
-import TextReveal from "@/components/ui/text-reveal";
 import { AnimatedList, AnimatedListItem } from "@/components/ui/animated-list";
 import { Skeleton } from "@/components/ui/skeleton";
 import Particles from "@/components/ui/particles";

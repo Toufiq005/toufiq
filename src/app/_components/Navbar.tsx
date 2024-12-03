@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ContactRound, Home, NotebookText } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 import AnimatedBackground from "@/components/motion-ui/animated-background";
 
 export default function Navbar() {

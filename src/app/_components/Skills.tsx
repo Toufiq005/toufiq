@@ -2,7 +2,6 @@
 
 import IconCloud from "@/components/ui/icon-cloud";
 import SparklesText from "@/components/ui/sparkles-text";
-import Meteors from "@/components/ui/meteors";
 import Particles from "@/components/ui/particles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";

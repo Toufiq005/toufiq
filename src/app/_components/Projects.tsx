@@ -1,17 +1,13 @@
 "use client";
 
 import SparklesText from "@/components/ui/sparkles-text";
-import IconCloud from "@/components/ui/icon-cloud";
 import { Spotlight } from "@/components/motion-ui/spotlight";
 import { Tilt } from "@/components/motion-ui/tilt";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import RippleButton from "@/components/ui/ripple-button";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import ShineBorder from "@/components/ui/shine-border";
-import { Separator } from "@/components/ui/separator";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MagicCard } from "@/components/ui/magic-card";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -29,8 +25,6 @@ import {
   DialogTrigger,
   DialogContent,
   DialogTitle,
-  DialogImage,
-  DialogSubtitle,
   DialogClose,
   DialogDescription,
   DialogContainer,
@@ -74,10 +68,6 @@ import spaceTwo from "@/assets/space-2.png";
 import spaceThree from "@/assets/space-3.png";
 import spaceFour from "@/assets/space-4.png";
 
-import snap from "@/assets/snap-1.png";
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { cn } from "@/lib/utils";
-import RetroGrid from "@/components/ui/retro-grid";
 import Particles from "@/components/ui/particles";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";

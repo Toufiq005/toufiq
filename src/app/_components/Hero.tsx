@@ -17,17 +17,17 @@ export default function Hero() {
     <section className="w-full mt-24 relative">
       <Meteors number={10} />
       <RetroGrid />
-      <div className="max-w-7xl mx-auto w-full px-10 py-20 flex items-center justify-between ">
+      <div className="max-w-7xl mx-auto w-full sm:px-10 px-5 py-20 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:items-center items-start justify-between ">
         <div>
           <BoxReveal >
-            <h1 className="font-poppins text-4xl font-bold mt-3 ">
-              <span className="font-poppins text-7xl">
+            <h1 className="font-poppins sm:text-4xl text-2xl font-bold mt-3 ">
+              <span className="font-poppins sm:text-7xl text-4xl">
                 Hey, I am<span className="text-primary"> Toufiq</span>
               </span>
             </h1>
           </BoxReveal>
           <BoxReveal >
-          <div className="flex items-center gap-2 uppercase font-medium mt-5 text-3xl">
+          <div className="flex items-center gap-2 uppercase font-medium mt-5 sm:text-3xl text-base">
             <span>I am a</span>
             <WordRotate
               className="text-primary !font-medium"

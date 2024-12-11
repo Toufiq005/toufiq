@@ -27,14 +27,14 @@ export default function Contact() {
   ];
 
   return (
-    <section className="w-full">
-      <div className="max-w-7xl mx-auto px-10 py-20">
+    <section className="w-full" id="contact">
+      <div className="max-w-7xl mx-auto sm:px-10 px-5 py-20">
         <div>
           <BoxReveal>
             <SparklesText
               sparklesCount={5}
               text="Contact"
-              className="text-5xl font-poppins"
+              className="sm:text-5xl text-3xl font-poppins"
             />
           </BoxReveal>
           <BoxReveal>
@@ -51,10 +51,10 @@ export default function Contact() {
             alt="cat"
             className="aspect-square w-full rounded-xl"
           /> */}
-          <div className="relative p-5 w-1/2">
+          <div className="relative p-5 w-1/2 lg:block hidden">
             <IconCloud iconSlugs={slugs} />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2 w-full">
             <ContactForm />
           </div>
         </Card>

@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en" className="dark">
+    <html suppressHydrationWarning lang="en" className="dark ">
       <body
         className={cn(
           nunito.variable,
@@ -37,7 +37,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class">
-          <ScrollArea className="h-screen">
+          <ScrollArea className="h-screen scroll-smooth">
             {children}
             <Toaster />
           </ScrollArea>

@@ -47,7 +47,7 @@ export default function About() {
   }, [resolvedTheme]);
 
   return (
-    <section className="w-full relative">
+    <section className="w-full relative" id="about">
       <Particles
         className="absolute inset-0"
         quantity={30}
@@ -55,16 +55,16 @@ export default function About() {
         color={color}
         refresh
       />
-      <div className="max-w-7xl mx-auto px-10 py-20 flex items-center">
-        <div className="w-2/3">
+      <div className="max-w-7xl mx-auto sm:px-10 px-5 py-20 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:items-center items-start">
+        <div className="lg:w-2/3 w-full">
           <BoxReveal>
             <SparklesText
               sparklesCount={5}
               text="About"
-              className="text-5xl font-poppins"
+              className="sm:text-5xl text-3xl font-poppins"
             />
           </BoxReveal>
-          <div className="font-nunito text-muted-foreground text-lg">
+          <div className="font-nunito text-muted-foreground sm:text-lg text-base">
             <BoxReveal>
               <p className="font-nunito mt-10">
                 I’m Toufiq Mowla, a front-end developer with 2 years of hands-on
@@ -98,7 +98,7 @@ export default function About() {
             </BoxReveal>
           </div>
         </div>
-        <div className="w-1/3 relative flex h-[500px] flex-col p-6 overflow-hidden rounded-lg bg-background">
+        <div className="lg:w-1/3 w-full relative flex h-[500px] flex-col sm:p-6 p-3 overflow-hidden rounded-lg bg-background">
           <AnimatedList>
             {reviews.map((review, index) => (
               <AnimatedListItem key={index}>

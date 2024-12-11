@@ -186,7 +186,7 @@ export default function Projects() {
   }, [resolvedTheme]);
 
   return (
-    <section className="w-full relative  overflow-hidden" id="projects">
+    <section className="w-full relative  overflow-hidden" id="project">
       <Particles
         className="absolute inset-0"
         quantity={100}
@@ -194,14 +194,14 @@ export default function Projects() {
         color={color}
         refresh
       />
-      <div className="max-w-7xl mx-auto px-10 py-20 flex flex-col items-center justify-center">
+      <div className="max-w-7xl mx-auto sm:px-10 px-5 py-20 flex flex-col items-center justify-center">
         <div className="flex items-center justify-between">
-          <div className="w-2/3">
+          <div className="lg:w-2/3 w-full">
             <BoxReveal>
               <SparklesText
                 sparklesCount={5}
                 text="Projects"
-                className="text-5xl font-poppins"
+                className="sm:ext-5xl text-3xl font-poppins"
               />
             </BoxReveal>
             <BoxReveal>
@@ -212,9 +212,9 @@ export default function Projects() {
               </p>
             </BoxReveal>
           </div>
-          <div className="w-1/2 flex items-center justify-center"></div>
+          
         </div>
-        <div className="grid grid-cols-2 gap-x-7 gap-y-16 mt-20">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-7 gap-y-16 mt-20">
           {projectData.map((project, i) => (
             <Dialog
               transition={{
@@ -323,7 +323,7 @@ export default function Projects() {
                       gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
                       className="p-6 rounded-t-none"
                     >
-                      <DialogTitle className="mt-b font-poppins text-3xl font-semibold text-nowrap">
+                      <DialogTitle className="mt-b font-poppins sm:text-3xl text-2xl font-semibold text-nowrap">
                         {project.name}
                         <span className="text-5xl text-primary">.</span>
                       </DialogTitle>

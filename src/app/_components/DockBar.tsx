@@ -22,25 +22,25 @@ export default function DockBar() {
       id: 1,
       name: "WhatsApp",
       icon: <FaWhatsapp size={18} />,
-      href: "#",
+      href: "https://api.whatsapp.com/send/?phone=8801975513724&text&type=phone_number&app_absent=0",
     },
     {
       id: 2,
       name: "Facebook",
       icon: <CiFacebook size={18} />,
-      href: "#",
+      href: "https://www.facebook.com/profile.php?id=100083757555513",
     },
     {
       id: 3,
       name: "GitHub",
       icon: <FaGithub size={18} />,
-      href: "#",
+      href: "https://github.com/Toufiq005",
     },
     {
       id: 4,
       name: "Mail",
       icon: <CiMail size={18} />,
-      href: "#",
+      href: "mailto:toufiqmowla@gmail.com",
     },
   ];
 

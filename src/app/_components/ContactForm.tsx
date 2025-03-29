@@ -1,4 +1,6 @@
 "use client";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -22,27 +24,45 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+      email: "",
+      message: "",
+    },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      console.log(values);
-      toast(
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
-      );
-    } catch (error) {
-      console.error("Form submission error", error);
-      toast.error("Failed to submit the form. Please try again.");
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    if (!formRef.current) {
+      toast.error("Form reference not found.");
+      return;
     }
-  }
+
+    // Replace with your actual EmailJS Service ID, Template ID, and Public Key
+    const serviceID = "service_1bu6uhf";
+    const templateID = "template_l48lszd";
+    const publicKey = "wzEKWpTt3HBv5Iymn";
+
+    emailjs
+      .sendForm(serviceID, templateID, formRef.current, publicKey)
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          form.reset(); // Reset form fields after successful submission
+        },
+        (error) => {
+          console.error("EmailJS error:", error);
+          toast.error("Failed to send message. Please try again.");
+        }
+      );
+  };
 
   return (
     <Form {...form}>
       <form
+        ref={formRef}
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-8 max-w-3xl mx-auto py-10 font-nunito"
       >
@@ -54,9 +74,14 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your name" type="text" {...field} />
+                {/* Add name attribute for EmailJS */}
+                <Input
+                  placeholder="Enter your name"
+                  type="text"
+                  {...field}
+                  name="username"
+                />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
@@ -69,9 +94,14 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" type="email" {...field} />
+                {/* Add name attribute for EmailJS */}
+                <Input
+                  placeholder="Enter your email"
+                  type="email"
+                  {...field}
+                  name="email"
+                />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
@@ -84,13 +114,14 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
+                {/* Add name attribute for EmailJS */}
                 <Textarea
                   placeholder="Drop you message"
                   className="resize-none"
                   {...field}
+                  name="message"
                 />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
